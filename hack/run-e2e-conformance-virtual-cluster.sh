@@ -479,5 +479,5 @@ if [ -z $SKIP_TEST ]; then
     export JUNIT_OUTPUT="${root}/${TEST_REPORT_PATH}/conformance-test-report"
   fi
 
-  SUITE=./test/conformance hack/run-e2e-conformance.sh
+  SUITE=./test/conformance GINKGO_ARGS="${GINKGO_ARGS:-}" hack/run-e2e-conformance.sh
 fi
